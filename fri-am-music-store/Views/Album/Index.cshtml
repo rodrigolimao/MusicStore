@@ -1,0 +1,27 @@
+﻿@model IEnumerable<fri_am_music_store.Models.Album>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<h2>Albums</h2>
+
+@*<ul>
+    @foreach (var a in ViewBag.albums)
+    {
+        <li<@a.Title</li>
+
+    }
+</ul>*@
+
+<ul>
+    @foreach (var a in Model)
+    {
+        <li>@Html.ActionLink(a.Title, "Index")</li>
+    }
+</ul>
+
+
